@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+  <div class="col-4">
+    <%= simple_form_for [@list, @bookmark], :class => "form-group" do |f| %>
+      <%= f.input :comment, :class => "form-control"%>
+      <%= f.association :movie, :class => "form-control"%>
+      <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+  <div class="col-4">
+    <%= simple_form_for @list, :class => "form-group" do |f| %>
+      <%= f.input :name, :class => "form-control"%>
+      <%= f.input :image_url, :class => "form-control"%>
+      <%= f.submit "Submit list", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="banner">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <p>Classic</p>
+  </div>
+</div>
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <h2>My Lists</h2>
+    <%= link_to "Create a movie list",new_list_path, :class => "btn btn-success text-white" %>
+  </div>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-3 image-container">
+        <%= image_tag list.image_url, :class => "img-responsive contains" %>
+        <h2>
+          <%= link_to list.name, list_path(list), :class => "overlay-text"%>
+        </h2>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
