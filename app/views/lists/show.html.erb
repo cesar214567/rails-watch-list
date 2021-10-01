@@ -24,4 +24,23 @@
       </div>
     <% end %>
   </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <h2>Reviews</h2>
+    <%= link_to "add a review",new_list_review_path(@list), :class => "btn btn-success text-white" %>
+  </div>
+  <div class="row mb-5 mt-5">
+    <% @list.reviews.each do |review| %>
+      <div class="card" style="width: 100vw;">
+        <div class="card-body d-flex justify-content-between">
+          <div>
+            <h5 class="card-title"><%= review.comment %>
+          </div>
+          <div>
+            <%= review.rating %><i class="fas fa-star text-danger"></i></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

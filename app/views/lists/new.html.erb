@@ -2,7 +2,7 @@
   <div class="col-4">
     <%= simple_form_for @list, :class => "form-group" do |f| %>
       <%= f.input :name, :class => "form-control"%>
-      <%= f.input :image_url, :class => "form-control"%>
+      <%= f.input :photo, as: :file %>
       <%= f.submit "Submit list", class: "btn btn-primary" %>
     <% end %>
   </div>

@@ -12,7 +12,7 @@
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-3 image-container">
-        <%= image_tag list.image_url, :class => "img-responsive contains" %>
+        <%= image_tag cl_image_path(list.photo.key, height: 300, width: 400, crop: :fill), :class => "img-responsive contains" %>
         <h2>
           <%= link_to list.name, list_path(list), :class => "overlay-text"%>
         </h2>
